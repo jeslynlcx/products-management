@@ -8,5 +8,9 @@ router.get("/", auth.authenticate, productController.getAllProducts)
 
 router.get("/:id", auth.authenticate, productController.getProductById)
 
+router.post("/", auth.authenticate, productController.addNewProduct)
+
+router.patch("/:id", auth.authenticate, productController.updateProduct)
+
 module.exports = router
 

@@ -5,8 +5,11 @@ const mongoose = require('mongoose')
 const cors = require("cors")
 const userRoutes = require("./routes/userRoute")
 const productRoutes = require("./routes/productRoute")
+
+require('dotenv').config()
+
 mongoose 
-    .connect("mongodb://localhost:27017/jwt_with_products")
+    .connect(process.env.MONGODB_URI)
     .then(() => {
         console.log("MongoDB Connected")
     })
