@@ -1,4 +1,4 @@
-function ProductCard({ product, onEdit }) {
+function ProductCard({ product, onEdit, onDelete }) {
     console.log(product);
     const { _id, name, description, price, category, imageUrl } = product;
 

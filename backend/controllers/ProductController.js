@@ -22,3 +22,8 @@ exports.updateProduct = async (req,res) => {
     res.json(updateProduct)
 }
 
+exports.deleteProduct = async (req,res) => {
+    const {id} = req.params
+    await Product.findByIdAndDelete({_id: id})
+    res.status(204).json()
+}
